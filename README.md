@@ -43,10 +43,10 @@ project-2
 
 # Outside Research
 
-When it comes to a person's mental well being, proper support is necessary. Unfortunately, educators are a mass population of people who are typically not provided with the proper support. With the rise of Covid 19 in early 2020, there was a spotlight placed on the fact that the majority of school districts in the US do not supply any form of insurance to their educators. This is a fact that I can attest to personally; every school that I have worked for has not supplied insurance to any of their staff members. According to Sterling Price, I am in good company. [Sterling Price](https://www.valuepenguin.com/teacher-benefit-study#rate), the senior research analyst at ValuePenguin, notes a key finding that nearly half a million teachers in our country are uninsured. This leaves educational professionals to pay for health services (mental or physical) out of their own pocket, on a already minimal salary. [Mira](https://www.talktomira.com/post/how-much-does-therapy-cost-without-health-insurance-in-2021), a modern benefits provider, states that in 2023 "on average, a therapy session costs between \\$138 - \\$300 for an hour-long session for those who do not have health insurance." Therefore, a session per week could end up costing an educator $1200/month. This is an expense that most educators simply cannot afford, and hence deters them from seeking professional mental health. 
+When it comes to a person's mental well being, proper support is necessary. Unfortunately, educators are a mass population of people who are typically not provided with the proper support. With the rise of Covid 19 in early 2020, there was a spotlight placed on the fact that the majority of school districts in the US do not supply any form of insurance to their educators. This is again a fact that I can attest to personally; every school that I have worked for has not supplied insurance to any of their staff members. According to Sterling Price, I am in good company. [Sterling Price](https://www.valuepenguin.com/teacher-benefit-study#rate), the senior research analyst at ValuePenguin, notes a key finding that nearly half a million teachers in our country are uninsured. This leaves educational professionals to pay for health services (mental or physical) out of their own pocket, on a already minimal salary. [Mira](https://www.talktomira.com/post/how-much-does-therapy-cost-without-health-insurance-in-2021), a modern benefits provider, states that in 2023 "on average, a therapy session costs between \\$138 - \\$300 for an hour-long session for those who do not have health insurance." Therefore, a session per week could end up costing an educator $1200/month. This is an expense that most educators simply cannot afford, and hence deters them from seeking professional mental health help. 
 
 
-Bellow are some teacher burnout statistics (provided by [ThinkImpact](https://www.thinkimpact.com/teacher-burnout-statistics/#:~:text=New%20teachers%20are%20leaving%20their,in%20other%20countries%20are%20quitting.))that I found intriguing and alarming: 
+Bellow are some teacher burnout statistics (provided by [ThinkImpact](https://www.thinkimpact.com/teacher-burnout-statistics/#:~:text=New%20teachers%20are%20leaving%20their,in%20other%20countries%20are%20quitting.)) that I found intriguing and alarming: 
 
 - A survey showed that 51% of teachers fear for their mental and physical health when teaching.
 
@@ -80,11 +80,11 @@ Bellow are some teacher burnout statistics (provided by [ThinkImpact](https://ww
 
 # Executive Summary
 
-Given the need to be able to decipher between an educator inquiring about mental health services and other non-educator customers I turned to sources on each of those topics. The Teaching subreddit [(r/teachihng)](https://www.reddit.com/r/teaching/) is a community meant for educators to share educational news, share tips and trick, and to even vent/seek advice on the trials and tribulations of being a teacher in today's society. This subreddit currently has over 120k members. The Mentalhealth subreddit [(r/mentalhealth)](https://www.reddit.com/r/mentalhealth/) is a forum to discuss, vent, support and share information about mental health, illness and wellness, currently hosting 417k members.
+Given the need to be able to decipher between an educator inquiring about mental health services and other non-educator customers I turned to sources on each of those topics. The Teaching subreddit [(r/teachihng)](https://www.reddit.com/r/teaching/) is a community meant for educators to share educational news, share tips and trick, and to even vent/seek advice on the trials and tribulations of being a teacher in today's society. This subreddit currently has over 120k members. The Mentalhealth subreddit [(r/mentalhealth)](https://www.reddit.com/r/mentalhealth/) is a forum to discuss, vent, support and share information about mental health, illness and wellness, and is currently hosting 417k members.
 
 From these two subreddits, over 7,400 posts were pulled, which included the titles and the text of each post. To clean these two datasets null and duplicated rows were removed. Attaching a picture or video in the post is what would create the null values and were thereby not helpful for this particular scenario. Once this cleaning was completed the teaching and mental health datasets provided 1,420 and 1,893 viable posts respectively. This is close to a 50/50 split in the combination of these two datasets. 
 
-Through the EDA process the two subreddits were explored separately. The first detail explored was the distribution of length and word counts of the title and post text. These distributions can be seen below: 
+Through the EDA process the two subreddits were explored separately. The first detail explored was the distribution of length and word counts of the title and post text. The distribution of the word counts only for titles and text can be seen below:
 
 ![Teacher Title Word Count](imgs/Teacher_Title_Word_Count.png) 
 ![Teacher Text Word Count](imgs/Teacher_Text_Word_Count.png)
@@ -93,7 +93,7 @@ Through the EDA process the two subreddits were explored separately. The first d
 ![Mentalhealth Text Word Count](imgs/Mentalhealt_Text_Word_Count.png) 
 
 
-As can be seen in the above images, all four distributions are skewed right meaning that longer titles and texts are not the majority. 
+As can be seen in the above images, all four distributions are skewed right meaning that super long titles and texts are not the majority. However you can see that those in the mental health often wrote more words.
 
 
 
@@ -103,7 +103,7 @@ From there, curiosity led to the exploration of what those words actually are. T
 ![Mentalhealth Text Bigram](imgs/Mentalhealth_Text_Bigram.png)
 
 
-From the image above, it can be seen that the terms "mental health" and "feel like" is a top bigram in both of these subreddits, making them common topics of discussion amongst the members. This sparked interest in the overall mood of these two reddit threads lead to a sentiment analysis. A score of 1 concludes a very positive sentiment, likewise a score of score of -1 concludes a very negative sentiment. Below is a table of the scores. The mental health scores are clearly negative, however, the teaching scores are not far ahead, meaning the overall sentiment of both of these subreddits is pretty negative. 
+From the image above, it can be seen that the terms "mental health" and "feel like" are top bigrams in both of these subreddits, making them common topics of discussion amongst the members. This sparked interest in the overall mood of these two reddit threads lead to a sentiment analysis. A score of 1 concludes a very positive sentiment, likewise a score of -1 concludes a very negative sentiment. Below is a table of the scores. The mental health scores are clearly negative, however, the teaching scores are not far ahead, meaning the overall sentiment of both of these subreddits is pretty negative. 
 
 
 |teaching title|teaching text|mentalhealth title|mentalhealth text|
@@ -112,7 +112,10 @@ From the image above, it can be seen that the terms "mental health" and "feel li
 
 
 
-After completion of EDA, I concatenated the two separate dataframes into one large dataframe. Multiple models were run on the combination dataframe (to include the use of CountVectorizer, TfidfVectorizer, MultinomialNB, and LogRegression) on the separate titles, texts, and then the combination of all that tested multiple parameters. The best model used TfidfVectorizer as the pre-processer and MultinomialNB as the model on the combination data of both the title and the text. The best parameters of this model included an n_gram range of (1,2), meaning that the best model was built off of unigrams and bigrams. I personally found this to be interesting due to my previous statement in which I mentioned that I felt the bigrams were more insightful. This model also removed all english stopwords. 
+
+After completion of EDA, I concatenated the two separate dataframes into one large dataframe. Multiple models were run on the combination dataframe (to include the use of CountVectorizer, TfidfVectorizer, MultinomialNB, and LogRegression) on the separate titles, texts, and then the combination of all that tested multiple parameters. The best score for the tests run on the title only was 0.872, and I knew I could do better. For text only it was 0.967 which is a vast improvement. It seemed to me that the more text that the model had to learn from, the better so I ran these tests on the combination of both the title and the text and received a score of 0.976. With my baseline model providing a score of 0.429, any of these models outperformed it. The best model used TfidfVectorizer as the pre-processor and Multinomial Naive Bayes as the model on the combination data of both the title and the text. 
+
+To break that down a bit further, tfidVectorizer tokenizes, counts, and normalizes the data to help streamline the natural language processing. The Naive Bayes models are commonly used for classification problems because they are fast and they often outperform more complicated models. The Multinomial NB was used because the data had positive integers. The best parameters of this model included an n_gram range of (1,2), meaning that the best model was built off of unigrams and bigrams. I personally found this to be interesting due to my previous statement in which I mentioned that I felt the bigrams were more insightful. This model also removed all english stopwords. 
 
 This model provided a training score of 0.9762 and a testing score of 0.9759 which can be interpreted as the mean accuracy of this model equaling 97.59%. Not too shabby! What does the 2.41% inaccuracy look like? Further examination of the predicted test values resulted in the following confusion matrix:
 
@@ -152,3 +155,5 @@ With the assistance of _Better Help_'s Educator Alliance Initiative, education p
 - [Teaching Subreddit](https://www.reddit.com/r/teaching/)
 
 - [Mental Health Subreddit](https://www.reddit.com/r/mentalhealth/)
+
+-[General Assembly Notes & Lessons](https://generalassemb.ly/)
